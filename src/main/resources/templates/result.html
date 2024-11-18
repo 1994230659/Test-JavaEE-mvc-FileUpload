@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upload Result</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .result-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h1 class="text-center mb-4">上传结果</h1>
+            <div class="alert alert-success" role="alert" th:text="${message}"></div>
+            <p th:if="${fileName != null}" class="mb-3" th:text="'File name: ' + ${fileName}"></p>
+            <a href="/" class="btn btn-primary">返回上传主页面</a>
+        </div>
+    </div>
+
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
